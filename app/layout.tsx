@@ -1,6 +1,8 @@
 import React from "react"
 import type { Metadata, Viewport } from 'next'
 import { Analytics } from '@vercel/analytics/next'
+import { Web3Provider } from '@/components/web3/Web3Provider'
+import { FarcasterProvider } from '@/lib/farcaster/FarcasterProvider'
 import './globals.css'
 
 export const viewport: Viewport = {
@@ -11,9 +13,14 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  title: 'Soccer IQ Quiz',
-  description: 'Test your football knowledge. 10 questions. 60 seconds. No images — just know the game.',
+  title: 'Soccer Quiz Pro | Earn SOCPT Tokens on CELO',
+  description: 'Play soccer trivia, pay 0.1 CELO, earn SOCPT tokens based on your score. A Farcaster Mini App powered by Web3.',
   generator: 'v0.app',
+  openGraph: {
+    title: 'Soccer Quiz Pro',
+    description: 'Earn crypto tokens by testing your soccer knowledge',
+    type: 'website',
+  },
   icons: {
     icon: [
       {
@@ -41,7 +48,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`font-sans antialiased`}>
-        {children}
+        <Web3Provider>
+          <FarcasterProvider>
+            {children}
+          </FarcasterProvider>
+        </Web3Provider>
         <Analytics />
       </body>
     </html>
