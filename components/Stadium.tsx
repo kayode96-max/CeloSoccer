@@ -48,7 +48,7 @@ export default function Stadium({ children, showFootballs = true }: StadiumProps
                 }}
               >
                 <div className="w-full h-full bg-white rounded-full shadow-lg relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-white to-gray-300 rounded-full opacity-80"></div>
+                  <div className="absolute inset-0 bg-linear-to-br from-white to-gray-300 rounded-full opacity-80"></div>
                   <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1/3 h-1/2 border-2 border-gray-400"></div>
                 </div>
               </div>
