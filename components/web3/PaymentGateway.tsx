@@ -65,7 +65,7 @@ export default function PaymentGateway({
   }
 
   return (
-    <div className="flex flex-col items-center gap-6 p-8 bg-gradient-to-br from-emerald-500/20 to-blue-500/20 rounded-2xl border-2 border-emerald-500/50">
+    <div className="flex flex-col items-center gap-6 p-8 bg-linear-to-br from-emerald-500/20 to-blue-500/20 rounded-2xl border-2 border-emerald-500/50">
       <div className="text-center">
         <h2 className="text-3xl font-bold text-white mb-2">
           🎮 Ready to Play?
